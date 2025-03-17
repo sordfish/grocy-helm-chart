@@ -2,9 +2,9 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: {{ include "grcoy.fullname" . }}-pvc
+  name: {{ include "grocy.fullname" . }}-pvc
   labels:
-    {{- include "grcoy.labels" . | nindent 4 }}
+    {{- include "grocy.labels" . | nindent 4 }}
 spec:
   storageClassName: {{ .Values.persistance.config.storageClass }}
   accessModes: {{ .Values.persistance.config.accessModes }}
